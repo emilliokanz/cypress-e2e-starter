@@ -1,4 +1,7 @@
 /// <reference types="cypress" />
+
+import { loginSso } from "./sso-login"
+
 // ***********************************************
 // This example commands.ts shows you how to
 // create various custom commands and overwrite
@@ -9,6 +12,16 @@
 // https://on.cypress.io/custom-commands
 // ***********************************************
 //
+
+Cypress.Commands.add('loginSso', loginSso)
+declare global {
+    namespace Cypress {
+        interface Chainable {
+            loginSso(username: string, password: string): Chainable<void>
+        }
+    }
+}
+
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
