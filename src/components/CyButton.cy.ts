@@ -8,7 +8,7 @@ describe('Button', () => {
       },
     });
 
-    cy.get('button').contains('Click Me');
+    cy.get('button').contains('Something');
   });
 
   it('when button is clicked, should call onClick', () => {
