@@ -4,13 +4,6 @@ import * as dotenv from 'dotenv'
 dotenv.config()
 
 export default defineConfig({
-  component: {
-    devServer: {
-      framework: "vue",
-      bundler: "vite",
-    },
-  },
-
   env: {
     sso_url: process.env.KEYCLOAK_URL,
   },
