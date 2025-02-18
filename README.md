@@ -2,11 +2,35 @@
 
 This template should help get you started testing external Applications
 
-## Type Support For `.vue` Imports in TS
+## Project Setup
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
+### Environment Variables
 
-1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
-2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
+create .env file to setup base url and sso url
 
-You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
+```sh
+APP_URL=
+KEYCLOAK_URL=
+```
+
+### Install dependencies
+
+```sh
+npm install
+```
+
+### Run test
+
+Select and run specs through the Cypress Dashboard 
+```sh
+npm run cypress:open
+```
+
+Runs all specs and generate video evidence. Video folder will be automatically made
+```sh
+npm run cypress:run
+```
+
+## SSO Login Test
+Use the cy.loginSso(username: string, password: string) command to access base app and login with the configured SSO
+
