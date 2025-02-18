@@ -1,4 +1,4 @@
-# Cypress e2e startedr
+# Cypress e2e starter
 
 This template should help get you started testing external Applications
 
@@ -32,5 +32,5 @@ npm run cypress:run
 ```
 
 ## SSO Login Test
-Use the cy.loginSso(username: string, password: string) command to access base app and login with the configured SSO
+Use the `cy.loginSso(username: string, password: string)` command to access base app and login with the configured SSO
 
