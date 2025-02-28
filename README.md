@@ -1,6 +1,6 @@
 # Cypress e2e starter
 
-This template should help get you started testing external Applications
+This template should help get you started testing external Web Applications
 
 ## Project Setup
 
